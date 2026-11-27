@@ -1,25 +1,45 @@
 {
   "expo": {
-    "name": "hush",
+    "name": "Hush",
     "slug": "hush",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0b0d12",
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "package": "com.thavixt.hush",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#0b0d12",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS"
+      ],
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-audio",
+        {
+          "enableBackgroundPlayback": true,
+          "enableBackgroundRecording": false,
+          "recordAudioAndroid": false,
+          "microphonePermission": false
+        }
+      ],
+      "expo-asset"
+    ]
   }
 }

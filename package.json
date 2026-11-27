@@ -3,20 +3,33 @@
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "@react-native-community/slider": "5.2.1",
     "expo": "~58.1.0",
+    "expo-asset": "~58.0.21",
+    "expo-audio": "~58.0.12",
+    "expo-dev-client": "~58.0.22",
     "expo-status-bar": "~58.0.5",
+    "expo-system-ui": "~58.0.7",
     "react": "19.3.0",
     "react-native": "0.88.1"
   },
   "devDependencies": {
+    "@types/node": "^26.6.11",
     "@types/react": "~19.3.0",
+    "eslint": "^9.0.0",
+    "eslint-config-expo": "~58.0.4",
     "typescript": "~6.0.3"
   },
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "generate:sounds": "node scripts/generate-noise.ts",
+    "lint": "expo lint",
+    "deploy": "bash ./deploy.sh",
+    "generate:icons": "node scripts/generate-icons.ts"
   },
   "private": true
 }
